@@ -21,7 +21,7 @@ class App extends Component {
         });
     }
 
-  findUserName() {
+  findUserName(event) {
     console.log('Function hit with username');
      fetch(`https://api.github.com/users/${this.state.userName}`)
         .then(res => res.json())
