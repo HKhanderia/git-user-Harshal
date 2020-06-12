@@ -30,9 +30,11 @@ class App extends Component {
           this.setState({ data: data })
         })
         .catch(console.log);
+      event.preventDefault();
   }
 
   render() {
+    var data = this.state.data;
     return (
       <div>
         <Hello name={this.state.name} />
@@ -49,7 +51,9 @@ class App extends Component {
         />
         <button onClick={this.findUserName}>
         Go!</button>
-        <div>{this.state.data}</div>
+        <h3>{data.login}</h3>
+        <h3>{data.id}</h3>
+        <h3>{data.avatar_url}</h3>
     	  </form>
     </div>
     );
